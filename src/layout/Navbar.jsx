@@ -1,12 +1,11 @@
-import React from "react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
 } from "@nextui-org/react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -16,27 +15,27 @@ export default function Header() {
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <NavLink color="foreground" to="/some">
             Features
-          </Link>
+          </NavLink>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <NavLink href="#" aria-current="page">
             Customers
-          </Link>
+          </NavLink>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <NavLink color="foreground" to="/signup">
             Integrations
-          </Link>
+          </NavLink>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+        <NavbarItem className=" lg:flex">
+          <NavLink to="/login">Login</NavLink>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={NavLink} color="primary" href="#" variant="flat">
             Sign Up
           </Button>
         </NavbarItem>

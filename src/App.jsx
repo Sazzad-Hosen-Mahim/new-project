@@ -1,11 +1,9 @@
-import { Button } from "@/components/ui/button";
-import Header from "./layout/Navbar";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   return (
     <>
-      <Header></Header>
-      <Button>Click me</Button>
+      <MainLayout />
     </>
   );
 }
