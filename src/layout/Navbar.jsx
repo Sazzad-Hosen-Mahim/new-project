@@ -24,8 +24,8 @@ export default function Header() {
   return (
     <Navbar
       isBordered={false}
-      shouldHideOnScroll
-      maxWidth="xl"
+      isBlurred={false}
+      maxWidth="2xl"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className=" bg-black/30 py-2 z-50 text-white dark:bg-background/50 backdrop-blur-sm fixed top-0 "
@@ -48,7 +48,7 @@ export default function Header() {
         ],
       }}
     >
-      <NavbarContent className="md:hidden" justify="start">
+      <NavbarContent className="md:hidden" justify="center">
         <NavbarMenuToggle />
       </NavbarContent>
 
@@ -68,6 +68,7 @@ export default function Header() {
           </NavLink>
         </motion.div>
       </NavbarContent>
+     
 
       <NavbarContent as="div" className="items-center" justify="end">
         <div className="hidden md:flex gap-8">
@@ -136,22 +137,7 @@ export default function Header() {
             {user && user.role === 'admin' ? 'Dashboard' : 'Profile'}
           </Button>
         )}
-        {user ? (
-          <UserPopover user={user} logout={logout} />
-        ) : (
-          <div>
-            <Button
-              as={Link}
-              to={'/login'}
-              color="default"
-              size="sm"
-              className="text-white"
-              variant="flat"
-            >
-              Login
-            </Button>
-          </div>
-        )}
+       
         <div className=" hidden md:block">{/* <ModeToggle /> */}</div>
       </NavbarContent>
       <NavbarMenu>
@@ -190,6 +176,25 @@ export default function Header() {
           )}
         </NavLink>
       </NavbarMenu>
+
+      <NavbarContent justify="end" className="flex gap-12">
+      {user ? (
+          <UserPopover user={user} logout={logout} />
+        ) : (
+          <div>
+            <Button
+              as={Link}
+              to={'/login'}
+              color="default"
+              size="sm"
+              className="text-white"
+              variant="flat"
+            >
+              Login
+            </Button>
+          </div>
+        )}
+      </NavbarContent>
     </Navbar>
   );
 }

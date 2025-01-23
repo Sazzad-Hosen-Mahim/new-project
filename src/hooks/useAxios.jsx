@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 const axiosSecure = axios.create({
   baseURL: import.meta.env.VITE_BACKEND_URL,
-  withCredentials: true,
+  withCredentials: false,
 });
 
 const useAxiosSecure = () => {

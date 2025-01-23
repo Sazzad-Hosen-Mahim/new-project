@@ -25,8 +25,9 @@ import { AuthContext } from '@/hooks/AuthContextProvider';
 import usePostMutate from '@/hooks/shared/usePostMutate';
 import Cookies from 'js-cookie';
 import toast from 'react-hot-toast';
-import ImageSelector from '@/others/ImageSelector';
+
 import { imageUpload } from '../helpers/cloudinary';
+import ImageSelector from '../others/ImageSelector';
 
 
 

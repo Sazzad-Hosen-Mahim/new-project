@@ -1,16 +1,18 @@
 // import { Spinner } from "@nextui-org/react";
+import { Progress } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const LoaderScreen = () => {
-  // const [value, setValue] = useState(20);
+  const [value, setValue] = useState(20);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setValue((v) => (v >= 100 ? 100 : v + 5));
-  //   }, 40);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setValue((v) => (v >= 100 ? 100 : v + 5));
+    }, 40);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <motion.div
@@ -23,36 +25,23 @@ const LoaderScreen = () => {
       {/* <Spinner color="#FFB457" /> */}
 
       <div to={"/"} className="flex items-center justify-center text-[80px]">
-        J <img className=" h-[60px] w-full " src="/logo.png" alt="" />
-        BIFY
+        
       </div>
-      {/* <Progress
+      <Progress
         aria-label="Downloading..."
         size="sm"
         value={value}
         color="#FFB457"
         showValueLabel={true}
         className="max-w-sm"
-      /> */}
+      />
     </motion.div>
   );
 };
 
 export default LoaderScreen;
 
-// const logoVariant = {
-//   hidden: {
-//     x: 100,
-//   },
-//   visible: {
-//     x: 0,
-//     transition: {
-//       duration: 1,
-//       type: "spring",
-//       stiffness: 80,
-//     },
-//   },
-// };
+
 const containerVariant = {
   hidden: {
     opacity: 0,

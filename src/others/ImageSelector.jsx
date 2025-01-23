@@ -1,13 +1,11 @@
-import { useRef, ChangeEvent, ReactNode } from 'react';
+/* eslint-disable react/prop-types */
+import { useRef } from 'react';
 
 const ImageSelector = ({
   handleFileChange,
   children,
-}: {
-  handleFileChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  children: ReactNode;
 }) => {
-  const imageRef = useRef<HTMLInputElement | null>(null);
+  const imageRef = useRef(null);
 
   const handleButtonClick = () => {
     if (imageRef.current) {
