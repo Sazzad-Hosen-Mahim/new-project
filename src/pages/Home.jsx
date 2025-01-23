@@ -1,51 +1,28 @@
-import { Button } from "@nextui-org/react";
-import usePostMutate from "../hooks/shared/usePostMutate";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Button, Pagination } from "@nextui-org/react";
 import CommonWrapper from "../components/CommonWrapper";
-import CommonHeader from "../components/CommonHeader";
+import { useState } from "react";
+import useFetchQuery from "../hooks/shared/useFetch";
 
 
 const Home = () => {
+  const [seeMore, setSeeMore] = useState( true )
  
-  const navigate = useNavigate();
-  const onSuccess= (data) =>{
-    console.log(data.data.id)
-    toast.success("product is added")
-    navigate(`/product/${data.data.id}`);
-
-  } 
-  const OnError= (err) =>{
-console.log(err)
-toast.error("Something went wrong")
-  } 
- const { isPending, mutate } =usePostMutate('/products/add', onSuccess, OnError)
+const [page, setPage] = useState(1)
+const { data, isSuccess } = useFetchQuery('/products', {limit: 10, skip: (page-1 )*10 });
 
 
-
+if(isSuccess){
+  console.log(data)
+}
   return(
    <>
   
-
-      <CommonWrapper>
-      <Button  isLoading={isPending}  isDisabled={true} onClick={()=> mutate({
-        title: 'BMW Pencil'
-    })}>Add Product</Button>
-      </CommonWrapper>
-    <div className="w-full h-[400px] bg-sky-950"></div>
-      <CommonWrapper>
-        <CommonHeader Class="text-red-500 text-center text-large">
-        HOT DEALS OF THE DAY
-
-        </CommonHeader>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, hic rerum neque sunt, vitae expedita, laboriosam ipsa ipsam quam error mollitia maxime incidunt quasi repellat voluptatibus perferendis officiis delectus ad.
-      
-      <CommonHeader>
-      Trending Products
-
-
-        </CommonHeader>
-      </CommonWrapper>
+<CommonWrapper>
+  
+<Button onClick={()=> setPage(page+1)}>Page {page}</Button>
+<Button onClick={()=> setSeeMore(true)}>See More</Button>
+<Pagination radius="none" initialPage={1} onChange={setPage} page={page} size="lg" total={10} />
+</CommonWrapper>
     </>
   );
 };
