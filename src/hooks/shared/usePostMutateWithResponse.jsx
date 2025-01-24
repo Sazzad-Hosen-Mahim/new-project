@@ -3,8 +3,8 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import Cookies from 'js-cookie';
 import useAxiosSecure from '../useAxios';
 
-const usePostMutate = (
-  route ,
+const usePostMutateWithResponse = (
+  route,
   onSuccess = () => {},
   onError = () => {}
 ) => {
@@ -37,4 +37,4 @@ const usePostMutate = (
   return { mutate, isPending };
 };
 
-export default usePostMutate;
+export default usePostMutateWithResponse;
