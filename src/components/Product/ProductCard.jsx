@@ -9,7 +9,7 @@ const ProductCard = ({ item }) => {
   return (
     <div className="border rounded-sm p-4 flex flex-col h-full text-center">
       {/* Title */}
-      <h1 className="text-xl font-bold mb-2">{title}</h1>
+      <h1 className="text-lg font-bold mb-2">{title}</h1>
 
       {/* Image */}
       <div className="w-full h-48 mb-4">
@@ -41,7 +41,7 @@ const ProductCard = ({ item }) => {
           {viewBtn}
         </button>
         <button className="flex-1 flex items-center justify-center p-3 bg-[#08233B] text-white rounded-xl">
-          <BuyIcon className="mr-2 text-3xl" />
+          <BuyIcon className="mr-2 text-xl" />
           {buyBtnTitle}
         </button>
       </div>
