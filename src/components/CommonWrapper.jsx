@@ -1,11 +1,7 @@
 /* eslint-disable react/prop-types */
 
-const CommonWrapper = ({children}) => {
-  return (
-    <div className="max-w-[1400px] py-4 mx-auto my-auto">
-      {children}
-    </div>
-  )
-}
+const CommonWrapper = ({ children }) => {
+  return <div className="max-w-[1400px] mx-auto p-5">{children}</div>;
+};
 
-export default CommonWrapper
+export default CommonWrapper;

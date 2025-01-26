@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <QueryClientProvider client={queryClient}>
           <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
             <AuthProvider>
-              <main className="min-h-screen  overflow-hidden font-fira text-foreground bg-background">
+              <main className="min-h-screen lg:w-[1220px] mx-auto overflow-hidden font-fira text-foreground bg-background">
                 <RouterProvider
                   location={location}
                   key={location}

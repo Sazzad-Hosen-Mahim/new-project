@@ -1,29 +1,18 @@
-import { Button } from "@nextui-org/react";
-import usePostMutate from "../hooks/shared/usePostMutate";
-import toast from "react-hot-toast";
-
+import CommonWrapper from "../components/CommonWrapper";
+import Description from "../components/Description/Description";
+import { Hero } from "../components/Hero/Hero";
+import Product from "../components/Product/Product";
+import Review from "../components/Review/Review";
 
 const Home = () => {
-  const onSuccess = (data)=> {
-    console.log(data)
-    toast.success("product is created")
-  }
-  const onError = (err)=> {
-console.log(err)
-toast.error("somewthing went wrong")
-
-  }
-  const {isPending: isLoading, mutate} = usePostMutate('/products/add', onSuccess, onError)
-
-
-  return(
-   <>
-
-<Button isLoading={isLoading} onClick={()=> {mutate({
-   title: 'Shirt',  
-   price: 20
-})}} >Add Product</Button>
-
+  return (
+    <>
+      <CommonWrapper>
+        <Hero />
+        <Product />
+        <Description />
+        <Review />
+      </CommonWrapper>
     </>
   );
 };

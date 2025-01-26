@@ -74,3 +74,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+header {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding-left: 1.25rem !important; /* Equivalent to Tailwind's px-5 */
+    padding-right: 1.25rem !important;
+    text-align: center !important; /* Centers the text inside the header */
+  }
+}
