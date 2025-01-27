@@ -7,9 +7,11 @@ const ProductCard = ({ item }) => {
   const { title, desc, image, viewBtn, buyBtnTitle, buyIcon: BuyIcon } = item;
 
   return (
-    <div className="border rounded-sm p-4 flex flex-col h-full text-center">
+    <div className="border rounded-sm p-4 flex flex-col h-full ">
       {/* Title */}
-      <h1 className="text-lg font-bold mb-2">{title}</h1>
+      <h1 className="text-lg font-bold mb-2 text-center hover:text-[#0B75AA]">
+        {title}
+      </h1>
 
       {/* Image */}
       <div className="w-full h-48 mb-4">

@@ -31,7 +31,7 @@ const Product = () => {
           cart!
         </p>
       </div>
-      <div className="grid lg:grid-cols-4 gap-2 rounded-md">
+      <div className="grid lg:grid-cols-4 gap-2 rounded-md ">
         {productItem.map((item) => (
           <ProductCard key={item.id} item={item} />
         ))}

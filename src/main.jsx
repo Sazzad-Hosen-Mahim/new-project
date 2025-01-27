@@ -9,6 +9,7 @@ import { ThemeProvider } from "./hooks/useTheme";
 import { RouterProvider } from "react-router-dom";
 import routes from "./routes/routes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Footer from "./layout/Footer";
 
 const queryClient = new QueryClient();
 
@@ -19,13 +20,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <QueryClientProvider client={queryClient}>
           <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
             <AuthProvider>
-              <main className="min-h-screen lg:w-[1220px] mx-auto overflow-hidden font-fira text-foreground bg-background">
+              <main className="min-h-screen lg:w-[1220px] mx-auto overflow-hidden font-fira text-foreground bg-background ">
                 <RouterProvider
                   location={location}
                   key={location}
                   router={routes}
                 />
               </main>
+              <Footer />
+
               <Toaster
                 position="bottom-left"
                 toastOptions={{
