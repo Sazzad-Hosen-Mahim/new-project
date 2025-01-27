@@ -4,7 +4,7 @@ import Header from "./Navbar";
 export default function MainLayout() {
   return (
     <div className="relative">
-      <Header className="" />
+      <Header />
       <div className="min-h-screen flex max-h-full flex-nowrap justify-start transition-[padding] duration-200 p-0 ">
         <div className="">
           <Outlet />

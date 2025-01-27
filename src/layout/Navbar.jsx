@@ -1,10 +1,34 @@
+/* eslint-disable no-unused-vars */
 import DropDown from "../components/ui/DropDown";
 import NavButton from "../components/Nav/NavButton";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="pt-3">
-      <div className="">
+    <div
+      className={`mt-5 ${
+        isSticky
+          ? "fixed top-0 left-50 w-full z-50 bg-white shadow-md max-w-[1220px] mx-auto"
+          : ""
+      }`}
+      id=""
+    >
+      <div>
         {/* Main Navbar */}
         <div className="flex flex-wrap justify-between items-center">
           {/* Logo Section */}
