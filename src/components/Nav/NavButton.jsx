@@ -6,9 +6,9 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
 } from "@heroui/react";
 import "./NavBarAnimation.css";
+import { Link } from "react-router-dom";
 
 const NavButton = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +43,7 @@ const NavButton = () => {
       <NavbarContent className="hidden sm:flex gap-[1px] w-full px-0">
         <NavbarItem>
           <Link
-            href="#"
+            to="/"
             className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center inline-block"
           >
             Home
