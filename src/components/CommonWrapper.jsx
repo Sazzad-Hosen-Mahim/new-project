@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 const CommonWrapper = ({ children }) => {
-  return <div className="max-w-[1400px] mx-auto p-5">{children}</div>;
+  return <div className="max-w-[1400px] mx-auto">{children}</div>;
 };
 
 export default CommonWrapper;

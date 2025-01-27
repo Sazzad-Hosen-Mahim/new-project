@@ -37,7 +37,7 @@ const NavButton = () => {
       </NavbarContent>
 
       {/* Center Content: Navigation Links */}
-      <NavbarContent className="hidden sm:flex gap-1 w-full px-0">
+      <NavbarContent className="hidden sm:flex gap-[1px] w-full px-0">
         {menuItems.map((item, index) => (
           <NavbarItem
             key={index}

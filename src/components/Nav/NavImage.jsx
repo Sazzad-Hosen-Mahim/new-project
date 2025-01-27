@@ -3,11 +3,22 @@ import { IoLogoAndroid } from "react-icons/io";
 const NavImage = () => {
   return (
     <div className="flex sm:flex-col md:flex-row">
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 relative">
         <img
           src="https://www.sleepingpillsuk.com/images/banner2.jpg"
           alt="banner-image"
         />
+        <div className="absolute right-4 bottom-6 lg:w-[350px] lg:h-[69px] bg-white border-1 border-dashed border-black flex items-center gap-10 px-5 py-9 rounded-lg">
+          <div className="uppercase mb-1 font-semibold ">
+            Get <span className="italic">10% off </span> on <br /> every order!
+          </div>
+          <div>
+            <p className="uppercase text-center font-semibold">Apply code</p>
+            <div className="uppercase bg-[#002039] text-white px-7 py-[5px] mb-1 border-1 border-dashed border-white text-md font-bold rounded-lg">
+              sleep 2025
+            </div>
+          </div>
+        </div>
       </div>
       <div className="bg-[#057793] w-[220px] px-2 text-center ms-1">
         <div className="py-2 flex justify-center">

@@ -12,7 +12,7 @@ import { Button } from "@nextui-org/react";
 const Review = () => {
   const [hoveredStar, setHoveredStar] = useState(0);
   return (
-    <div className="p-5 mt-7 shadow-xl rounded-md bg-white border border-gray-200">
+    <div className="p-5 m-5 mt-7 mb-20 shadow-xl rounded-md bg-white border border-gray-200">
       <div className="mb-10">
         <h1 className="text-2xl font-bold my-3">Customer Review</h1>
         {customers.map((review) => (
