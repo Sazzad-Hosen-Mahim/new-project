@@ -73,6 +73,10 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(180deg, rgba(1,145,178,1) 0%, rgba(10,122,161,1) 100%)",
+      },
     },
   },
   darkMode: "class",

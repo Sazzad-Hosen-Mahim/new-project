@@ -34,7 +34,7 @@ const items = [
 
 const NavStaticItem = () => {
   return (
-    <div className="flex w-full space-x-[1px] mt-1">
+    <div className="flex w-full gap-[3px] mt-1 text-center mx-auto">
       {items.map((item, i) => (
         <div key={i} className="flex-1">
           <div className="bg-[#057793] px-[12px] py-2">

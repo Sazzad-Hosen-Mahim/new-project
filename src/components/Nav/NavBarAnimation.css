@@ -1,0 +1,12 @@
+.dropdown-container .absolute {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropdown-container:hover .absolute {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
