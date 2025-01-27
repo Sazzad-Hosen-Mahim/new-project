@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`mt-5 ${
+      className={`pt-5 ${
         isSticky
           ? "fixed top-0 left-50 w-full z-50 bg-white shadow-md max-w-[1220px] mx-auto"
           : ""
