@@ -1,4 +1,5 @@
 import { TiShoppingCart } from "react-icons/ti";
+import { FaStar } from "react-icons/fa";
 
 export const productItem = [
   {
@@ -87,6 +88,24 @@ export const productItem = [
     title: "Lorazepam",
     desc: "Lorazepam is a benzodiazepine medication which is used for the treatment of anxiety, insomnia, seizures and alcohol withdrawal. This medication, which is also known by popular branded medication Ativan, acts on nerve activity in the brain to calm severe anxiety.",
     image: "https://www.sleepingpillsuk.com/product-img/lorazepam_2mg.jpg",
+    viewBtn: "View Info",
+    buyIcon: TiShoppingCart,
+    buyBtnTitle: "Buy Now",
+  },
+  {
+    id: 11,
+    title: "Tramadol",
+    desc: "Tramadol is powerful painkiller used for the relief of moderate to severe pain. It is classed as an opioid analgesic and works by blocking pain signals that travel through the nervous system.",
+    image: "https://www.sleepingpillsuk.com/product-img/tramadol.png",
+    viewBtn: "View Info",
+    buyIcon: TiShoppingCart,
+    buyBtnTitle: "Buy Now",
+  },
+  {
+    id: 12,
+    title: "Pregabalin",
+    desc: "Pregabalin is a medication used for the treatment of anxiety, epilepsy and fibromyalgia. Also known by the popular brand name Lyrica, this medication is also used to provide relief from nerve pain caused by diabetes, shingles or spinal injury.",
+    image: "https://www.sleepingpillsuk.com/product-img/Pregabalin-300mg.png",
     viewBtn: "View Info",
     buyIcon: TiShoppingCart,
     buyBtnTitle: "Buy Now",
@@ -205,5 +224,32 @@ export const customers = [
     customerReview:
       "The best shopping experience I’ve had in a while! Everything was seamless, and I’ll definitely be back.",
     customerImage: "",
+  },
+];
+
+export const relatedProducts = [
+  {
+    id: 1,
+    imageSrc: "https://www.sleepingpillsuk.com/product-img/ambien.png",
+    title: "Zolpidem 10 mg",
+    star: FaStar,
+    desc: "From Only £ 0.77 Each",
+    buyImage: "https://www.sleepingpillsuk.com/images/BuyNow-1.png",
+  },
+  {
+    id: 2,
+    imageSrc: "https://www.sleepingpillsuk.com/product-img/diazepam.png",
+    title: "Diazepam 10 mg ",
+    star: FaStar,
+    desc: "From Only £ 0.78 Each",
+    buyImage: "https://www.sleepingpillsuk.com/images/BuyNow-1.png",
+  },
+  {
+    id: 3,
+    imageSrc: "https://www.sleepingpillsuk.com/product-img/nitrosun.png",
+    title: "Nitrazepam 10 mg",
+    star: FaStar,
+    desc: "From Only £ 0.78 Each",
+    buyImage: "https://www.sleepingpillsuk.com/images/BuyNow-1.png",
   },
 ];

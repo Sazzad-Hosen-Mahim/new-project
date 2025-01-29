@@ -11,7 +11,7 @@ const ProductImageCard = ({ item }) => {
         <img
           src={image}
           alt={title}
-          className="w-full h-[172px] object-cover transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg"
+          className="lg:w-full lg:h-[172px] lg:object-cover transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg"
         />
       </div>
 

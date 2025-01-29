@@ -29,7 +29,7 @@ const Navbar = () => {
     >
       <div>
         {/* Main Navbar */}
-        <div className="flex flex-wrap justify-between items-center">
+        <div className="flex flex-wrap md:flex-nowrap justify-between items-center">
           {/* Logo Section */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
             <img
@@ -50,7 +50,7 @@ const Navbar = () => {
 
           {/* Last Section - Moves Below Logo on Small Screens */}
           <div className="w-full md:w-auto flex items-center justify-center gap-2 mt-4 md:mt-0">
-            <button className="p-3 bg-black text-white hover:bg-white hover:text-black border-1 border-black text-xs font-bold">
+            <button className="p-3 bg-black text-white hover:bg-white hover:text-black border border-black text-xs font-bold">
               (0) My Cart
             </button>
             <div className="bg-[#057793] border-none text-white text-xs">
@@ -58,6 +58,8 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+
+        {/* Navigation Buttons */}
         <div className="mt-3">
           <NavButton />
         </div>

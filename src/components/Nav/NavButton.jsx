@@ -162,25 +162,27 @@ const NavButton = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-[#3474B1] mt-36 w-full px-0">
-        {[
-          "Home",
-          "About Us",
-          "Products",
-          "FAQs",
-          "Testimonials",
-          "Blog",
-          "Contact Us",
-          "Bitcoin Discount",
-        ].map((item) => (
-          <NavbarMenuItem key={item}>
-            <Link className="w-full py-2 justify-center block" href="#">
-              {item}
-            </Link>
-            <hr className="w-full" />
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+      {isMenuOpen && (
+        <NavbarMenu className="bg-[#3474B1] mt-36 w-full flex flex-col items-start px-0">
+          {[
+            "Home",
+            "About Us",
+            "Products",
+            "FAQs",
+            "Testimonials",
+            "Blog",
+            "Contact Us",
+            "Bitcoin Discount",
+          ].map((item) => (
+            <NavbarMenuItem key={item}>
+              <Link className="w-full py-2 text-left block" to="#">
+                {item}
+              </Link>
+              <hr className="w-full" />
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      )}
     </Navbar>
   );
 };
