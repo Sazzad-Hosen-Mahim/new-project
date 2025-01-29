@@ -1,13 +1,20 @@
 /* eslint-disable react/prop-types */
 import { FaAngleRight } from "react-icons/fa";
+import { useState } from "react";
 
 const ProductImageCard = ({ item }) => {
   const { title, image } = item;
+  const [isImageHovered, setIsImageHovered] = useState(false);
+  const [isButtonHovered, setIsButtonHovered] = useState(false);
 
   return (
-    <div className="flex flex-col group items-center w-full">
+    <div className="flex flex-col items-center w-full group">
       {/* Image Container */}
-      <div className="relative w-full flex justify-center overflow-hidden">
+      <div
+        className="relative w-full flex justify-center overflow-hidden"
+        onMouseEnter={() => setIsImageHovered(true)}
+        onMouseLeave={() => setIsImageHovered(false)}
+      >
         <img
           src={image}
           alt={title}
@@ -16,7 +23,21 @@ const ProductImageCard = ({ item }) => {
       </div>
 
       {/* Button */}
-      <button className="w-full bg-[#097AA1] text-white p-3 text-center transition-colors duration-300 group-hover:bg-[#2F458F] hover:bg-[#002039]">
+      <button
+        className="w-full text-white p-3 text-center transition-colors duration-300"
+        style={{
+          backgroundColor: isButtonHovered
+            ? "#002039" // Button hover color
+            : isImageHovered
+            ? "#2F458F" // Image hover color
+            : "#097AA1", // Default color
+        }}
+        onMouseEnter={(e) => {
+          e.stopPropagation(); // Prevents hover from propagating to the parent
+          setIsButtonHovered(true);
+        }}
+        onMouseLeave={() => setIsButtonHovered(false)}
+      >
         <div className="flex items-center justify-center">
           <span className="text-sm md:text-base font-semibold">
             See All {title}
