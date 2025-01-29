@@ -4,7 +4,10 @@ import ProductImageCard from "./ProductImageCard";
 
 const Product = () => {
   return (
-    <div>
+    <div className="px-4 sm:px-6 lg:px-0">
+      {" "}
+      {/* Added padding for smaller devices */}
+      {/* Welcome Section */}
       <div className="mb-12">
         <h1 className="text-3xl text-center font-bold mt-12">
           Welcome to Our 24/7 E-Pharmacy
@@ -31,12 +34,14 @@ const Product = () => {
           cart!
         </p>
       </div>
-      <div className="grid lg:grid-cols-4 gap-2 rounded-md ">
+      {/* Product Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 rounded-md">
         {productItem.map((item) => (
           <ProductCard key={item.id} item={item} />
         ))}
       </div>
-      <div className="grid lg:grid-cols-4 gap-2 mt-10 ">
+      {/* Image Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
         {imageCard.map((item) => (
           <div key={item.id}>
             <ProductImageCard item={item} />
@@ -46,4 +51,5 @@ const Product = () => {
     </div>
   );
 };
+
 export default Product;

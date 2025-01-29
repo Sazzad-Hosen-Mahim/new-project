@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
 
           {/* Last Section - Moves Below Logo on Small Screens */}
-          <div className="w-full md:w-auto flex items-center justify-center gap-2 mt-4 md:mt-0">
+          <div className="w-full md:w-auto flex flex-row-reverse sm:flex-row items-center justify-start gap-2 mt-4 md:mt-0 sm:px-1">
             <button className="p-3 bg-black text-white hover:bg-white hover:text-black border border-black text-xs font-bold">
               (0) My Cart
             </button>

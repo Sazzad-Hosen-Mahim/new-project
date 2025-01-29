@@ -1,6 +1,6 @@
 const Description = () => {
   return (
-    <div className="mt-24">
+    <div className="mt-24 px-5 lg:px-0">
       <div className="mb-12">
         <h1 className="text-xl font-bold">What is Insomnia?</h1>
         <p className="text-justify mt-4">

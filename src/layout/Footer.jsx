@@ -1,11 +1,10 @@
 import { IoMdArrowDropright } from "react-icons/io";
 import { FaLock } from "react-icons/fa6";
-import { FaFacebookSquare, FaPinterestSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <div className="bg-[#002139] lg:h-[240px] lg:w-full">
-      <div className="lg:w-[1220px] grid grid-cols-6 gap-7 mx-auto p-5 text-white">
+      <div className="lg:w-[1220px] grid lg:grid-cols-6 gap-7 mx-auto p-5 text-white">
         {/* support  */}
         <div className="col-span-2">
           <p>Support</p>

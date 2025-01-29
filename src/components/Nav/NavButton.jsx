@@ -37,6 +37,7 @@ const NavButton = () => {
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
         />
       </NavbarContent>
 
@@ -163,7 +164,7 @@ const NavButton = () => {
       </NavbarContent>
 
       {isMenuOpen && (
-        <NavbarMenu className="bg-[#3474B1] mt-36 w-full flex flex-col items-start px-0">
+        <NavbarMenu className="bg-[#3474B1] mt-32 w-full flex flex-col items-center px-0">
           {[
             "Home",
             "About Us",
@@ -174,11 +175,14 @@ const NavButton = () => {
             "Contact Us",
             "Bitcoin Discount",
           ].map((item) => (
-            <NavbarMenuItem key={item}>
-              <Link className="w-full py-2 text-left block" to="#">
+            <NavbarMenuItem
+              key={item}
+              className="w-full flex flex-col items-center"
+            >
+              <Link className="w-full py-2 text-center block text-white" to="#">
                 {item}
               </Link>
-              <hr className="w-full" />
+              <hr className="w-full border border-white" />
             </NavbarMenuItem>
           ))}
         </NavbarMenu>
