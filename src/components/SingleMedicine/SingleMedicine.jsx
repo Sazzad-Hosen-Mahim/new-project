@@ -1,11 +1,3 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
 import MedicineTabs from "../ui/MedicineTabs";
 import Review from "../Review/Review";
@@ -16,26 +8,6 @@ import { FaStar } from "react-icons/fa";
 const SingleMedicine = () => {
   return (
     <div className="">
-      {/* breadcrumb  */}
-      <div className=" bg-gray-100 py-3 px-5 ps-10 flex-none">
-        <Breadcrumb>
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/components">
-                Sleeping Tablets
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Zopiclone 7.5 mg</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-      </div>
       <hr className="border-2 border-black mt-3" />
       <div>
         <div>
