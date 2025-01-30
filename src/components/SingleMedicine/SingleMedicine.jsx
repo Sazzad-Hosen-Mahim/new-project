@@ -5,11 +5,13 @@ import RelatedProductCard from "../RelatedProductCard/RelatedProductCard";
 import { relatedProducts } from "../../lib/Data/ProductCardItem";
 import { FaStar } from "react-icons/fa";
 import SingleMedicineDesc from "./SingleMedicineDesc";
+import Breadcrumb from "../Breadcrumbs/Breadcrumb";
 
 const SingleMedicine = () => {
   return (
     <div className="px-4 md:px-8 lg:px-0">
-      <hr className="border-2 border-black mt-3" />
+      <Breadcrumb />
+
       <div>
         <div>
           <h1 className="text-xl md:text-2xl mt-2">
