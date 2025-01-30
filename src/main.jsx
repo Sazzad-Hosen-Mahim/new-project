@@ -7,10 +7,9 @@ import "./index.css";
 import AuthProvider from "./hooks/AuthContextProvider";
 import { ThemeProvider } from "./hooks/useTheme";
 import { RouterProvider } from "react-router-dom";
-import routes from "./routes/routes";
+import routes from "./routes/Routes.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Footer from "./layout/Footer";
-import { Popover } from "@heroui/react";
 import PopOverNew from "./components/Popover/Popover";
 
 const queryClient = new QueryClient();
