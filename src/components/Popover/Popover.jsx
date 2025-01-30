@@ -15,13 +15,13 @@ const PopOverNew = () => {
         <Button className="fixed bottom-0 rounded-tl-lg rounded-tr-3xl rounded-b-none -right-[100px] transform -translate-x-1/2 z-50 bg-[#002039] text-white flex gap-4 px-10">
           <p className="relative">
             {" "}
-            Chat with us, we`&apos;re online!
+            Chat with us, we&apos;re online!
             <div className="w-16 h-16 rounded-full bg-green-500 absolute -top-[42px] -right-[125px]" />
           </p>
           <ChatIcon />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="p-0 rounded-b-none">
+      <PopoverContent className="p-0 rounded-b-none rounded-tr-3xl">
         <div className="flex gap-5 bg-[#002039] text-white py-3 pe-24 px-4 rounded-tl-lg rounded-tr-3xl rounded-b-none">
           <div className="">
             <Badge

@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import { dropdownOptions } from "../../lib/Data/ProductCardItem";
 import DropdownWithInput from "../ui/DropDownInput";
 import RadioButton from "../ui/Radio";
@@ -9,9 +10,12 @@ const ProductCard = ({ item }) => {
   return (
     <div className="border rounded-sm p-4 flex flex-col h-full ">
       {/* Title */}
-      <h1 className="text-lg font-bold mb-2 text-center hover:text-[#0B75AA]">
+      <Link
+        to="/medicine"
+        className="text-lg font-bold mb-2 text-center hover:text-[#0B75AA]"
+      >
         {title}
-      </h1>
+      </Link>
 
       {/* Image */}
       <div className="w-full h-48 mb-4">

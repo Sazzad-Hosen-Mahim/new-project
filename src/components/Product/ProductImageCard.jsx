@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { FaAngleRight } from "react-icons/fa";
 import { useState } from "react";
@@ -24,14 +25,13 @@ const ProductImageCard = ({ item }) => {
 
       {/* Button */}
       <button
-        className="w-full text-white p-3 text-center transition-colors duration-300"
-        style={{
-          backgroundColor: isButtonHovered
-            ? "#002039" // Button hover color
-            : isImageHovered
-            ? "#2F458F" // Image hover color
-            : "#097AA1", // Default color
-        }}
+        className={`w-full text-white p-3 text-center transition-colors duration-300 ${
+          isImageHovered
+            ? "bg-[#2F458F]"
+            : isButtonHovered
+            ? "bg-[#002039]"
+            : "bg-[#097AA1]"
+        }`}
         onMouseEnter={(e) => {
           e.stopPropagation(); // Prevents hover from propagating to the parent
           setIsButtonHovered(true);

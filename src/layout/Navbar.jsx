@@ -2,6 +2,7 @@
 import DropDown from "../components/ui/DropDown";
 import NavButton from "../components/Nav/NavButton";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -32,11 +33,13 @@ const Navbar = () => {
         <div className="flex flex-wrap md:flex-nowrap justify-between items-center">
           {/* Logo Section */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
-            <img
-              src="https://www.sleepingpillsuk.com/images/sleepingpils_05.png"
-              alt="logo"
-              className="h-12"
-            />
+            <Link to="/">
+              <img
+                src="https://www.sleepingpillsuk.com/images/sleepingpils_05.png"
+                alt="logo"
+                className="h-12"
+              />
+            </Link>
           </div>
 
           {/* Middle Section - Hidden on Small Screens */}

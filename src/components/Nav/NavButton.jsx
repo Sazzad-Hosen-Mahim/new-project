@@ -9,6 +9,7 @@ import {
 } from "@heroui/react";
 import "./NavBarAnimation.css";
 import { Link } from "react-router-dom";
+import { GoHomeFill } from "react-icons/go";
 
 const NavButton = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,9 +46,10 @@ const NavButton = () => {
         <NavbarItem>
           <Link
             to="/"
-            className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center inline-block"
+            className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center flex gap-2 items-center"
           >
-            Home
+            <GoHomeFill />
+            <span className="block">Home</span>
           </Link>
         </NavbarItem>
 
