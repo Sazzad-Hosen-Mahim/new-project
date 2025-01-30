@@ -55,7 +55,7 @@ const NavButton = () => {
 
         <NavbarItem>
           <Link
-            href="#"
+            to="/about"
             className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center inline-block"
           >
             About Us
@@ -120,7 +120,7 @@ const NavButton = () => {
 
         <NavbarItem>
           <Link
-            href="#"
+            to="/faq"
             className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center inline-block"
           >
             FAQs
@@ -129,7 +129,7 @@ const NavButton = () => {
 
         <NavbarItem>
           <Link
-            href="#"
+            to="testimonials"
             className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center inline-block"
           >
             Testimonials
@@ -138,7 +138,7 @@ const NavButton = () => {
 
         <NavbarItem>
           <Link
-            href="#"
+            to="blog"
             className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center inline-block"
           >
             Blog
@@ -147,7 +147,7 @@ const NavButton = () => {
 
         <NavbarItem>
           <Link
-            href="#"
+            to="contact"
             className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center inline-block"
           >
             Contact Us
@@ -157,7 +157,7 @@ const NavButton = () => {
         {/* Last Button: Bitcoin Discount */}
         <NavbarItem className="flex-grow">
           <Link
-            href="#"
+            to="bitcoin"
             className="bg-custom-gradient font-bold text-white py-[12px] px-[35px] text-center w-full block"
           >
             Bitcoin Discount
